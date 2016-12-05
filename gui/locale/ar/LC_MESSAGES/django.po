@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-04 02:07-0700\n"
-"PO-Revision-Date: 2016-01-19 22:30+0000\n"
-"Last-Translator: Michael <michaeleino@hotmail.com>\n"
+"PO-Revision-Date: 2016-11-27 17:55+0000\n"
+"Last-Translator: Abdulrhman <mail1144@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1453242630.0\n"
+"X-POOTLE-MTIME: 1480269308.0\n"
 
 #: choices.py:40
 msgid "Plain"
-msgstr "مجرد"
+msgstr "عادي                         "
 
 # Should not be translated into arabic
 #: choices.py:41 choices.py:557 system/models.py:320
@@ -50,63 +50,63 @@ msgstr "تلقائي"
 
 #: choices.py:54
 msgid "PIO0"
-msgstr "بي آي أو 0"
+msgstr "PIO0"
 
 #: choices.py:55
 msgid "PIO1"
-msgstr "بي آي أو 1"
+msgstr "PIO1"
 
 #: choices.py:56
 msgid "PIO2"
-msgstr "بي آي أو 2"
+msgstr "PIO2"
 
 #: choices.py:57
 msgid "PIO3"
-msgstr "بي آي أو 3"
+msgstr "PIO3"
 
 #: choices.py:58
 msgid "PIO4"
-msgstr "بي آي أو 4"
+msgstr "PIO4"
 
 #: choices.py:59
 msgid "WDMA0"
-msgstr "دبليو دي إم آي 0"
+msgstr "WDMA0"
 
 #: choices.py:60
 msgid "WDMA1"
-msgstr "دبليو دي إم آي 1"
+msgstr "WDMA1"
 
 #: choices.py:61
 msgid "WDMA2"
-msgstr "دبليو دي إم آي 2"
+msgstr "WDMA2"
 
 #: choices.py:62
 msgid "UDMA-16"
-msgstr "يو دي إم آي-16"
+msgstr "UDMA-16"
 
 #: choices.py:63
 msgid "UDMA-33"
-msgstr "يو دي إم آي-33"
+msgstr "UDMA-33"
 
 #: choices.py:64
 msgid "UDMA-66"
-msgstr "يو دي إم آي-66"
+msgstr "UDMA-66"
 
 #: choices.py:65
 msgid "UDMA-100"
-msgstr "يو دي إم آي-100"
+msgstr "UDMA-100"
 
 #: choices.py:66
 msgid "UDMA-133"
-msgstr "يو دي إم آي-133"
+msgstr "UDMA-133"
 
 #: choices.py:67
 msgid "SATA 1.5Gbit/s"
-msgstr "ساتا 1,5 جيجا بت/ثانية"
+msgstr "SATA 1.5Gbit/s"
 
 #: choices.py:68
 msgid "SATA 3.0Gbit/s"
-msgstr "ساتا 3 جيجابت/ثانية"
+msgstr "SATA 3.0Gbit/s"
 
 #: choices.py:72
 msgid "Always On"
@@ -233,7 +233,7 @@ msgstr "الأحد"
 
 #: choices.py:163
 msgid "Anonymous"
-msgstr "غير مشفر"
+msgstr "مجهول                "
 
 #: choices.py:164
 msgid "Local User"
@@ -261,7 +261,7 @@ msgstr "آلة الزمن"
 # what idoes that mean?? or where it will appear? what it should show up?
 #: choices.py:199
 msgid "No case folding"
-msgstr ""
+msgstr "لا توجد حالة قابلة للطي"
 
 #: choices.py:200 choices.py:201
 msgid "Lowercase names in both directions"
@@ -808,7 +808,7 @@ msgstr "‫‏‫لا يمكن استرداد‫‫ %(url)s: %(error)s"
 #: freeadmin/navtree.py:445
 #, python-format
 msgid "An error occurred while unserializing from %(url)s: %(error)s"
-msgstr ""
+msgstr "حدث خطأ أثناء إجراء تسلسل من٪ (رابط) s: ٪(خطأ)s"
 
 #: freeadmin/views.py:257
 msgid "It was not possible to retrieve the current status"
@@ -930,7 +930,7 @@ msgstr ""
 #: network/forms.py:360
 #, python-format
 msgid "The network '%s' is not valid, CIDR expected."
-msgstr ""
+msgstr "الشبكة '%s' من المتوقع انها غير صحيحة التوجيه الطبقي بين المجال CIDR"
 
 #: network/forms.py:428
 msgid "You have to specify IPv4 address as well per alias"
@@ -955,6 +955,8 @@ msgstr "يجب ان تختار مابين IPv4 و IPv6 لكل اسم مستعا�
 #: network/forms.py:453
 msgid "You must specify either an valid IPv4 or IPv6 with maskbit per alias"
 msgstr ""
+"يجب عليك تحديد إما عناوين IPv4 صالح أو الإصدار IPv6 مع maskbit في الاسم "
+"المستعار"
 
 #: network/models.py:42 services/models.py:1284
 #: templates/system/system_info.html:5
@@ -1010,6 +1012,8 @@ msgstr "DHCP"
 msgid ""
 "When enabled, use DHCP to obtain IPv4 address as well as default router, etc."
 msgstr ""
+"عندما تمكن، استخدام DHCP للحصول على عناوين IPv4، وكذلك جهاز التوجيه "
+"الافتراضي، الخ"
 
 #: network/models.py:99 network/models.py:215
 #: templates/network/interface.html:8 templates/network/summary.html:6
@@ -1026,7 +1030,7 @@ msgstr "اعداد تلقائي IPv6"
 
 #: network/models.py:113
 msgid "When enabled, automatically configurate IPv6 address via rtsol(8)."
-msgstr ""
+msgstr "تمكين، تكوين عنوان IPv6 تلقائيا عن طريق rtsol (8)."
 
 #: network/models.py:116 network/models.py:228
 #: templates/network/interface.html:10
@@ -1035,7 +1039,7 @@ msgstr "عنوان IPv6"
 
 #: network/models.py:125 network/models.py:237
 msgid "IPv6 Prefix Length"
-msgstr ""
+msgstr "بادئة الطول لأصدار IPv6"
 
 #: network/models.py:130 network/models.py:358
 #: templates/network/interface.html:11
@@ -1067,6 +1071,8 @@ msgstr "واجهات وهمية"
 #: network/models.py:266
 msgid "Interface names must be vlanX where X is a number. Example: vlan0."
 msgstr ""
+"يجب أن تسمي واجهة كرت الشبكة  أي اسم ورقم لكرت الشبكة مثال vlan0 أو lan0 حيث "
+"X يمثل رقم"
 
 #: network/models.py:271 templates/network/lagg_members.html:5
 #: templates/network/vlan.html:5
@@ -1075,7 +1081,7 @@ msgstr "واجهة فعلية"
 
 #: network/models.py:274 templates/network/vlan.html:6
 msgid "VLAN Tag"
-msgstr ""
+msgstr "بطاقة VLAN"
 
 #: network/models.py:278 network/models.py:392 services/models.py:86
 #: services/models.py:916 storage/models.py:211 storage/models.py:352
@@ -1099,11 +1105,11 @@ msgstr "نوع البروتوكول"
 
 #: network/models.py:319 network/models.py:372 templates/network/index.html:13
 msgid "Link Aggregation"
-msgstr ""
+msgstr "تجميع الارتباط"
 
 #: network/models.py:320 network/models.py:373 network/nav.py:33
 msgid "Link Aggregations"
-msgstr ""
+msgstr "تجميع الارتباطات"
 
 #: network/models.py:346
 msgid "LAGG Interface group"
@@ -1111,15 +1117,15 @@ msgstr ""
 
 #: network/models.py:349
 msgid "LAGG Priority Number"
-msgstr ""
+msgstr "عدد الأولوية LAGG"
 
 #: network/models.py:354
 msgid "Physical NIC"
-msgstr ""
+msgstr "بطاقات الشبكة NIC"
 
 #: network/models.py:384
 msgid "Destination network"
-msgstr ""
+msgstr "تعيين الشبكة"
 
 #: network/models.py:388 templates/network/staticroute.html:6
 msgid "Gateway"
@@ -1169,7 +1175,7 @@ msgstr ""
 
 #: plugins/forms.py:119
 msgid "PBI file to be installed"
-msgstr ""
+msgstr "ملف PBI الى التثبيت"
 
 #: plugins/forms.py:173
 msgid "You must turn off Plugins service before proceeding"
@@ -1214,11 +1220,11 @@ msgstr ""
 
 #: plugins/forms.py:286 templates/plugins/mountpoints.html:6
 msgid "Mounted?"
-msgstr ""
+msgstr "محمل؟"
 
 #: plugins/forms.py:314
 msgid "The full path cannot exceed 88 characters"
-msgstr ""
+msgstr "المسار الكامل لا يمكن أن يتجاوز 88 حرفا"
 
 #: plugins/forms.py:336
 #, python-format
@@ -1233,11 +1239,11 @@ msgstr ""
 #: plugins/models.py:38 templates/plugins/plugin_info.html:5
 #: templates/services/plugins.html:30
 msgid "Plugin name"
-msgstr ""
+msgstr "اسم البرنامج المساعد"
 
 #: plugins/models.py:39
 msgid "Name of the plugin"
-msgstr ""
+msgstr "اسم البرنامج المساعد"
 
 #: plugins/models.py:44
 msgid "Plugin info name"
@@ -1261,12 +1267,12 @@ msgstr "إصدارة API للملحق"
 
 #: plugins/models.py:62 plugins/models.py:63
 msgid "Plugin architecture"
-msgstr ""
+msgstr "الهندسة المعمارية للبرنامج المساعد"
 
 #: plugins/models.py:67 plugins/models.py:68
 #: templates/plugins/plugin_info.html:9
 msgid "Plugin enabled"
-msgstr ""
+msgstr "تمكين المساعد"
 
 #: plugins/models.py:74 plugins/models.py:75
 #: templates/plugins/plugin_info.html:13
@@ -6218,7 +6224,6 @@ msgstr ""
 #~ msgid "Pass"
 #~ msgstr "تمرير"
 
-#, fuzzy
 msgid "Disable password"
 msgstr "تعطيل"
 
@@ -6540,7 +6545,6 @@ msgid "Spaces or number signs are not allowed."
 msgstr ""
 
 #: services/forms.py:754
-#, fuzzy
 msgid "Confirm Domain Account Password"
 msgstr "كلمة السر"
 
@@ -9051,7 +9055,6 @@ msgid "Certificate"
 msgstr ""
 
 #: services/forms.py:864
-#, fuzzy
 msgid "Incorrect password."
 msgstr "كلمة السر"
 
@@ -10684,7 +10687,6 @@ msgstr ""
 
 #: storage/admin.py:629
 #: storage/forms.py:1741
-#, fuzzy
 msgid "VMWare Sync"
 msgstr "متاح"
 
@@ -10708,7 +10710,6 @@ msgstr ""
 
 #: storage/models.py:1098
 #: templates/storage/index.html:38
-#, fuzzy
 msgid "VMWare-Snapshot"
 msgstr "متاح"
 
@@ -11332,7 +11333,6 @@ msgid ""
 msgstr ""
 
 #: services/views.py:334
-#, fuzzy
 msgid "Fiber Channel Ports have been successfully changed."
 msgstr "%s تحدث بنجاح."
 
@@ -12004,12 +12004,10 @@ msgid " vCenter Port"
 msgstr ""
 
 #: vcp/models.py:60
-#, fuzzy
 msgid " vCenter User name"
 msgstr "إسم المستخدم"
 
 #: vcp/models.py:67
-#, fuzzy
 msgid " vCenter Password"
 msgstr "كلمة السر"
 
@@ -12019,7 +12017,6 @@ msgstr ""
 
 #: vcp/models.py:78
 #: vcp/models.py:79
-#, fuzzy
 msgid "VCenter Configuration"
 msgstr "إعدادات عامة"
 
@@ -12605,4 +12602,506 @@ msgstr "ايقاف التشغيل"
 msgid ""
 "The command used to shutdown the server. You can use a custom command here "
 "to perform other tasks before shutdown.default: /sbin/shutdown -p now"
+msgstr ""
+
+#: choices.py:1045
+msgid "Rights"
+msgstr "الحقوق"
+
+#: choices.py:1051
+msgid "Amazon S3"
+msgstr "أمازون S3"
+
+#: api/resources.py:655
+msgid "Volume is not encrypted."
+msgstr "لم يتم تشفير الصوت."
+
+#: api/resources.py:1588
+msgid "Not ran since last boot"
+msgstr "لا يجري منذ التمهيد الأخير"
+
+#: directoryservice/models.py:919
+#, fuzzy
+msgid "User Base"
+msgstr "إسم المستخدم"
+
+#: directoryservice/models.py:921
+msgid "DN of the user container in AD."
+msgstr ""
+
+#: directoryservice/models.py:926
+#, fuzzy
+msgid "Group Base"
+msgstr "اسم المجموعة"
+
+#: directoryservice/models.py:928
+msgid "DN of the group container in AD."
+msgstr ""
+
+#: jails/forms.py:259
+msgid "You can either enter dhcp or static ip but not both"
+msgstr ""
+
+#: jails/forms.py:1038
+#, fuzzy
+msgid "This name is already in use."
+msgstr "توجد مجموعة بنفس الاسم"
+
+#: jails/models.py:350
+msgid "Unable to delete associated periodic snapshot %(task)s:%(error)s"
+msgstr ""
+
+#: services/forms.py:903
+msgid "The community must contain only alphanumeric characters _ . spaces or -"
+msgstr ""
+
+#: services/forms.py:1505
+msgid "Zvol \"%s\" does not exist"
+msgstr ""
+
+#: services/models.py:148
+#: services/models.py:304
+msgid ""
+"Use this option to override the username ('nobody' by default) which will be "
+"used for access to services which are specified as guest. Whatever "
+"privileges this user has will be available to any client connecting to the "
+"guest service. This user must exist in the password file, but does not "
+"require a valid login. The user root cannot be used as guest account."
+msgstr ""
+
+#: services/models.py:177
+msgid "These parameters are added to the [global] section of smb.conf"
+msgstr ""
+
+#: services/models.py:220
+msgid ""
+"Specifies whether Samba should use (expensive) hostname lookups or use IP "
+"addresses instead. An example place where hostname lookups are currently "
+"used is when checking the hosts deny and hosts allow."
+msgstr ""
+
+#: services/models.py:244
+msgid ""
+"This boolean parameter controls the behaviour of smbd(8) when receiving a "
+"protocol request of \"open for execution\" from a Windows client. With Samba "
+"3.6 and older, the execution right in the ACL was not checked, so a client "
+"could execute a file even if it did not have execute rights on the file. In "
+"Samba 4.0, this has been fixed, so that by default, i.e. when this parameter "
+"is set to \"False\", \"open for execution\" is now denied when execution "
+"permissions are not present. If this parameter is set to \"True\", Samba "
+"does not check execute permissions on \"open for execution\", thus re-"
+"establishing the behavior of Samba 3.6 "
+msgstr ""
+
+#: services/models.py:265
+msgid ""
+"IP addresses to bind to. If none specified, all available interfaces that "
+"are up will be listened on."
+msgstr ""
+
+#: services/models.py:296
+msgid "Allows guest access to all Apple shares on this box."
+msgstr ""
+
+#: services/models.py:315
+msgid ""
+"IP addresses to advertise and listens to. If none specified, advertise the "
+"first IP address of the system, but to listen for any incoming request."
+msgstr ""
+
+#: services/models.py:333
+msgid "Enable/disable home directories for AFP user."
+msgstr ""
+
+#: services/models.py:343
+msgid "When set, overrides the default Home Share Name."
+msgstr ""
+
+#: services/models.py:360
+msgid "Map ACLs"
+msgstr ""
+
+#: services/models.py:357
+msgid "These parameters are added to the [Global] section of afp.conf"
+msgstr ""
+
+#: services/models.py:362
+msgid ""
+"How to map the effective permissions of authenticated users: Rights ("
+"default, Unix-style permissions), Mode (ACLs), or None"
+msgstr ""
+
+#: services/models.py:383
+msgid ""
+"Specifies how many servers to create. There should be enough to handle the "
+"maximum level of concurrency from clients, typically four to six."
+msgstr ""
+
+#: services/models.py:421
+msgid ""
+"Select the IP addresses to listen to for NFS requests. If left unchecked, "
+"NFS will listen on all available addresses."
+msgstr ""
+
+#: services/models.py:442
+msgid ""
+"Forces the rpc.statd daemon to bind to the specified port, for both IPv4 and "
+"IPv6 address families."
+msgstr ""
+
+#: services/models.py:451
+msgid ""
+"Force the rpc.lockd daemon to bind to the specified port, for both IPv4 and "
+"IPv6 address families."
+msgstr ""
+
+#: services/models.py:458
+msgid ""
+"Ignore the group membership sent on the wire by the NFS client and look up "
+"the group membership on the server.  Note that this option is mutually "
+"incompatible with the NFSv3 ownership model for NFSv4."
+msgstr ""
+
+#: services/models.py:467
+msgid "Enable/disable mountd logging into syslog."
+msgstr ""
+
+#: services/models.py:473
+msgid "Enable/disable statd and lockd logging into syslog."
+msgstr ""
+
+#: services/models.py:507
+msgid "Enable iSCSI ALUA"
+msgstr ""
+
+#: services/models.py:509
+msgid "Enabling this feature requires initiator reconfiguration"
+msgstr ""
+
+#: services/models.py:565
+msgid ""
+"Size of extent: 0 means auto, a raw number is bytes, or suffix with KB, MB, "
+"or TB for convenience."
+msgstr ""
+
+#: services/models.py:573
+msgid ""
+"Logical block length (512 by default). The recommended length for "
+"compatibility is 512."
+msgstr ""
+
+#: services/models.py:581
+msgid ""
+"By default, the physical blocksize is reported as the ZFS block size, which "
+"can be up to 128K. Some initiators do not work with values above 4K. "
+"Checking this disables reporting the physical blocksize."
+msgstr ""
+
+#: services/models.py:597
+#: services/models.py:700
+msgid "A description can be entered here for your reference."
+msgstr ""
+
+#: services/models.py:626
+msgid ""
+"RPM reported to initiators for this extent/LUN. The default is SSD because "
+"Windows will attempt to defrag non SSD devices.  This is a pathological "
+"worst-case situation for ZFS.  VMWare gives the option to use SSD LUNs as "
+"swap devices. There is some value to picking a non-SSD RPM if your extent is "
+"indeed not SSDs and the initiator will be VMWare."
+msgstr ""
+
+#: services/models.py:1441
+msgid "Override the file creation mask (077 by default)."
+msgstr ""
+
+#: services/models.py:1449
+msgid "Override the directory creation mask (077 by default)."
+msgstr ""
+
+#: services/models.py:1479
+msgid ""
+"Cause the server to display the network information for the specified "
+"address to the client, on the assumption that IP address or DNS host is "
+"acting as a NAT gateway or port forwarder for the server."
+msgstr ""
+
+#: services/models.py:1734
+msgid ""
+"Extra options to /usr/local/etc/ssh/sshd_config (usually empty). Note, "
+"incorrect entered options prevent SSH service to be started."
+msgstr ""
+
+#: services/models.py:1935
+msgid "Control the access a remote host has to this module"
+msgstr ""
+
+#: services/models.py:1941
+msgid "Maximum number of simultaneous connections. Default is 0 (unlimited)."
+msgstr ""
+
+#: services/models.py:1948
+msgid ""
+"Specify the user name for file transfers to and from that module. In "
+"combination with the 'Group' option, this determines which file permissions "
+"are available. Leave this field empty to use default settings."
+msgstr ""
+
+#: services/models.py:1958
+msgid ""
+"Specify the group name for file transfers to and from that module. Leave "
+"this field empty to use default settings."
+msgstr ""
+
+#: services/models.py:1964
+msgid ""
+"This option is a comma, space, or tab delimited set of hosts which are "
+"permitted to access this module. You can specify the hosts by name or IP "
+"number. Leave this field empty to use default settings."
+msgstr ""
+
+#: services/models.py:1972
+msgid ""
+"A comma, space, or tab-delimited set of hosts which are NOT permitted to "
+"access this module. Where the lists conflict, the allow list takes "
+"precedence. In the event that it is necessary to deny all by default, use "
+"the keyword ALL (or the netmask 0.0.0.0/0) and then explicitly specify in "
+"the hosts allow parameter those hosts that should be permitted access. Leave "
+"this field empty to use default settings."
+msgstr ""
+
+#: services/models.py:1984
+msgid ""
+"These parameters will be added to the module configuration in rsyncd.conf."
+msgstr ""
+
+#: services/models.py:2006
+msgid ""
+"Set the interval between disk checks to N minutes. The default is 30 minutes."
+msgstr ""
+
+#: services/models.py:2018
+msgid ""
+"Report if the temperature has changed by at least N degrees Celsius since "
+"the last report. 0 to disable."
+msgstr ""
+
+#: services/models.py:2024
+msgid ""
+"Report as informational in the system log if the temperature is greater or "
+"equal than N degrees Celsius. 0 to disable."
+msgstr ""
+
+#: services/models.py:2031
+msgid ""
+"Report as critical in the system log and send an email if the temperature is "
+"greater or equal than N degrees Celsius. 0 to disable."
+msgstr ""
+
+#: services/models.py:2039
+msgid "Destination email address. Separate email addresses with commas."
+msgstr ""
+
+#: services/models.py:2184
+msgid ""
+"The port on which WebDAV will run.<br>Do not use a port that is already in "
+"use by another service (e.g. 22 for SSH)."
+msgstr ""
+
+#: services/models.py:2193
+msgid ""
+"The port on which Secure WebDAV will run.<br>Do not use a port that is "
+"already in use by another service (e.g. 22 for SSH)."
+msgstr ""
+
+#: services/models.py:2210
+msgid ""
+"Type of HTTP Authentication for WebDAV<br>Basic Auth: Password is sent over "
+"the network as plaintext (Avoid if HTTPS is disabled) <br>Digest Auth: The "
+"hash of the password is sent over the network (more secure)."
+msgstr ""
+
+#: sharing/admin.py:80
+msgid ""
+"full_audit VFS object is known to have file transfer issues with Windows 10. "
+"Do you wish to continue?"
+msgstr ""
+
+#: sharing/forms.py:464
+msgid "This option can only be used for datasets."
+msgstr ""
+
+#: sharing/models.py:334
+msgid ""
+"The credentials of the specified user is used for remote access by root."
+msgstr ""
+
+#: sharing/models.py:274
+msgid ""
+"These parameters are added to the [Volume] section of afp.conf. Add each "
+"different parameter on a newline"
+msgstr ""
+
+#: sharing/models.py:345
+msgid ""
+"The credentials of the specified group is used for remote access by root."
+msgstr ""
+
+#: sharing/models.py:356
+msgid ""
+"The credentials of the specified user is used for remote access by all users."
+msgstr ""
+
+#: sharing/models.py:367
+msgid ""
+"The credentials of the specified group is used for remote access by all "
+"users."
+msgstr ""
+
+#: storage/admin.py:144
+#: storage/forms.py:1196
+#: storage/forms.py:1429
+#: storage/forms.py:1513
+msgid "Comments"
+msgstr ""
+
+#: storage/forms.py:2011
+msgid "Setup mode"
+msgstr ""
+
+#: storage/forms.py:2013
+#, fuzzy
+msgid "Manual"
+msgstr "يناير"
+
+#: storage/forms.py:2014
+#, fuzzy
+msgid "Semi-automatic"
+msgstr "تلقائي"
+
+#: storage/forms.py:2025
+#, fuzzy
+msgid "Remote HTTP/HTTPS Port"
+msgstr "إتش تي تي بي إس"
+
+#: storage/forms.py:2030
+msgid "Remote HTTPS"
+msgstr ""
+
+#: storage/forms.py:2035
+msgid "Remote Auth Token"
+msgstr ""
+
+#: storage/forms.py:2039
+msgid ""
+"On the remote host go to Storage -> Replication Tasks, click the Temporary "
+"Auth Token button and paste the resulting value in to this field."
+msgstr ""
+
+#: storage/forms.py:2222
+msgid "I'm aware this will destroy snapshots of this zvol"
+msgstr ""
+
+#: storage/forms.py:2187
+#, fuzzy
+msgid "Token is invalid."
+msgstr "المستخدم %s غير صالح."
+
+#: storage/forms.py:2191
+msgid "Failed to connect to remote: %s"
+msgstr ""
+
+#: storage/forms.py:2417
+msgid "CIFS"
+msgstr ""
+
+#: system/forms.py:1003
+msgid "Invalid syslog server format"
+msgstr ""
+
+#: system/forms.py:2613
+msgid ""
+"Cut and paste the contents of your certificate here.<br>Order in which you "
+"should paste this: <br>The Primary Certificate.<br>The Intermediate CA's "
+"Certificate(s) (optional).<br>The Root CA Certificate (optional)"
+msgstr ""
+
+#: system/forms.py:3004
+msgid "Access Key"
+msgstr ""
+
+#: system/forms.py:3008
+msgid "Secret Key"
+msgstr ""
+
+#: system/models.py:348
+msgid "Use FQDN for logging"
+msgstr ""
+
+#: system/models.py:987
+#, fuzzy
+msgid "Account Name"
+msgstr "حساب"
+
+#: system/models.py:1003
+msgid "Cloud Credential"
+msgstr ""
+
+#: tasks/forms.py:76
+msgid "Invalid provider details."
+msgstr ""
+
+#: tasks/forms.py:83
+msgid "Invalid credential."
+msgstr ""
+
+#: tasks/forms.py:86
+#, fuzzy
+msgid "Bucket is required."
+msgstr "ملف مطلوب"
+
+#: tasks/hook.py:40
+#: tasks/models.py:103
+msgid "Cloud Sync"
+msgstr ""
+
+#: tasks/models.py:54
+msgid "Credential"
+msgstr ""
+
+#: tasks/models.py:98
+msgid "Disabling will not stop any syncs which are in progress."
+msgstr ""
+
+#: tasks/models.py:104
+msgid "Cloud Syncs"
+msgstr ""
+
+#: tasks/forms.py:96
+msgid "Folder \"%s\" does not exist."
+msgstr ""
+
+#: tasks/models.py:52
+msgid "Push - From local to remote. Pull - From remote to local."
+msgstr ""
+
+#: tasks/views.py:53
+msgid "The cloud sync process has started"
+msgstr ""
+
+#: templates/services/core.html:113
+msgid "CIFS Settings"
+msgstr ""
+
+#: templates/storage/replication_datagrid.html:17
+#: templates/storage/replication_datagrid.html:19
+msgid "Temporary Auth Token"
+msgstr ""
+
+#: templates/system/config_upload.html:6
+msgid "All your passwords will be reset. Make sure to set them after reboot."
+msgstr ""
+
+#: templates/tasks/cloudsync_run.html:5
+msgid "Would you like to run this cloud sync now?"
 msgstr ""
