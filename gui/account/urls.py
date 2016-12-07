@@ -28,7 +28,7 @@
 from django.conf.urls import patterns, url
 from django.contrib.auth.views import logout
 
-from freenasUI.common.system import get_sw_name
+from freenasUI.common.system import get_sw_name, SW_NAME_TB
 
 
 urlpatterns = patterns(
@@ -40,5 +40,5 @@ urlpatterns = patterns(
     url(r'^bsdgroup/json/$', 'json_groups', name="account_bsdgroup_json"),
     url(r'^bsdgroup/(?P<object_id>\d+)/members/$', 'group2user_update', name="account_bsdgroup_members"),
     url(r'^login/$', 'login_wrapper', {'template_name': 'registration/login.html'}, name="account_login"),
-    url(r'^logout/$', logout, {'template_name': 'registration/logout.html', 'extra_context': {'sw_name': get_sw_name()}}, name="account_logout"),
+    url(r'^logout/$', logout, {'template_name': 'registration/logout.html', 'extra_context': {'sw_name': SW_NAME_TB}}, name="account_logout"),
 )
