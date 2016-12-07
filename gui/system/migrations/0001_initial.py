@@ -8,7 +8,7 @@ from freenasUI.common.system import get_sw_name
 class Migration(DataMigration):
 
     def forwards(self, orm):
-        
+
         # Adding model 'Settings'
         db.create_table('system_settings', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
@@ -135,8 +135,8 @@ class Migration(DataMigration):
 
         stg = orm.Settings()
         stg.stg_guiprotocol='http'
-        stg.stg_language='en'
-        stg.stg_timezone='America/Los_Angeles'
+        stg.stg_language='zh_CN'
+        stg.stg_timezone='Asia/Shanghai'
         stg.stg_ntpserver1='0.freebsd.pool.ntp.org iburst maxpoll 10'
         stg.stg_ntpserver2='1.freebsd.pool.ntp.org iburst maxpoll 10'
         stg.stg_ntpserver3='2.freebsd.pool.ntp.org iburst maxpoll 10'
@@ -156,7 +156,7 @@ class Migration(DataMigration):
         adv.save()
 
     def backwards(self, orm):
-        
+
         # Deleting model 'Settings'
         db.delete_table('system_settings')
 
