@@ -255,6 +255,7 @@ class NavTree(object):
                     e)
                 log_traceback(log=log)
 
+        '''
         nav = TreeRoot(
             'documentation',
             name=_('Guide'),
@@ -264,6 +265,7 @@ class NavTree(object):
             order=970,
         )
         tree_roots.register(nav)
+        '''
 
         nav = TreeRoot(
             'display',
