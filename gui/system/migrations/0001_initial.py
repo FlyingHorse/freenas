@@ -3,7 +3,7 @@ import datetime
 from south.db import db
 from south.v2 import DataMigration
 from django.db import models
-from freenasUI.common.system import get_sw_name
+from freenasUI.common.system import get_sw_name, SW_NAME_TB
 
 class Migration(DataMigration):
 
@@ -151,7 +151,7 @@ class Migration(DataMigration):
         adv.adv_tuning=0
         adv.adv_powerdaemon=0
         adv.adv_zeroconfbonjour=1
-        adv.adv_motd='Welcome to %s' % (get_sw_name(), )
+        adv.adv_motd='Welcome to %s' % (SW_NAME_TB, )
         adv.adv_swapondrive=2
         adv.save()
 
