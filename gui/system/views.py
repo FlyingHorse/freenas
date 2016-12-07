@@ -65,7 +65,10 @@ from freenasUI.account.models import bsdUsers
 from freenasUI.common.system import (
     get_sw_name,
     get_sw_version,
-    send_mail
+    send_mail,
+    SW_NAME_TB,
+    SW_VERSION_TB,
+    HOST_NAME_TB,
 )
 from freenasUI.common.ssl import (
     export_certificate,
@@ -121,6 +124,10 @@ def _system_info(request=None):
         freenas_build = get_sw_version()
     except:
         freenas_build = "Unrecognized build"
+
+    freenas_build = SW_VERSION_TB
+    if hostname.startswith('FreeNAS') or hostname.startswith('freenas'):
+        hostname = HOST_NAME_TB
 
     return {
         'hostname': hostname,
@@ -656,8 +663,8 @@ def reboot(request):
         return HttpResponseRedirect('/')
     request.session.pop("allow_reboot")
     return render(request, 'system/reboot.html', {
-        'sw_name': get_sw_name(),
-        'sw_version': get_sw_version(),
+        'sw_name': SW_NAME_TB,
+        'sw_version': SW_VERSION_TB,
     })
 
 
@@ -686,8 +693,8 @@ def shutdown(request):
         return HttpResponseRedirect('/')
     request.session.pop("allow_shutdown")
     return render(request, 'system/shutdown.html', {
-        'sw_name': get_sw_name(),
-        'sw_version': get_sw_version(),
+        'sw_name': SW_NAME_TB,
+        'sw_version': SW_VERSION_TB,
     })
 
 
@@ -738,7 +745,7 @@ def testmail(request):
 
     error = False
     if request.is_ajax():
-        sw_name = get_sw_name()
+        sw_name = SW_NAME_TB
         error, errmsg = send_mail(
             subject=_('Test message from %s') % sw_name,
             text=_('This is a message test from %s') % sw_name,

@@ -17,6 +17,7 @@ from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
 
 from freenasUI.common.system import get_sw_name, get_sw_version
+from freenasUI.common.system import HOST_NAME_TB, SW_VERSION_TB, SW_NAME_TB
 from freenasUI.freeadmin.apppool import appPool
 from freenasUI.freeadmin.options import BaseFreeAdmin
 
@@ -226,7 +227,11 @@ class FreeAdminSite(object):
                 settings.save()
         except:
             wizard = False
-        sw_version = get_sw_version()
+        #sw_version = get_sw_version()
+        sw_version = SW_VERSION_TB
+        sw_name = SW_NAME_TB
+        if hostname and hostname.startswith('FreeNAS'):
+            hostname = HOST_NAME_TB
 
         try:
             with client as c:
@@ -248,7 +253,7 @@ class FreeAdminSite(object):
         return render(request, 'freeadmin/index.html', {
             'consolemsg': console,
             'hostname': hostname,
-            'sw_name': get_sw_name(),
+            'sw_name': sw_name,
             'sw_version': sw_version,
             'cache_hash': hashlib.md5(sw_version).hexdigest(),
             'css_hook': appPool.get_base_css(request),

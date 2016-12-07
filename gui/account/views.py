@@ -53,6 +53,7 @@ from freenasUI.common.freenasnis import (
 )
 from freenasUI.common.freenasusers import FreeNAS_Users, FreeNAS_Groups
 from freenasUI.common.system import get_sw_login_version, get_sw_name
+from freenasUI.common.system import SW_VERSION_TB, SW_NAME_TB, HOST_NAME_TB
 from freenasUI.freeadmin.apppool import appPool
 from freenasUI.freeadmin.views import JsonResp
 
@@ -311,7 +312,8 @@ def login_wrapper(
         extra_context = {}
     extra_context.update({
         'sw_login_version': get_sw_login_version(),
-        'sw_name': get_sw_name(),
+        #'sw_name': get_sw_name(),
+        'sw_name': SW_NAME_TB,
     })
     if not models.bsdUsers.has_root_password():
         authentication_form = forms.NewPasswordForm

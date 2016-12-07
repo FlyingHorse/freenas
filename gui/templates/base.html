@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr">
 <head>
-    <!--<title>{% if hostname %}{{ hostname }} - {% endif %}{{ sw_version }}</title> -->
-    <title>{% if hostname %}TaBang - {% endif %}TaBangNAS-0.11</title>
+    <title>{% if hostname %}{{ hostname }} - {% endif %}{{ sw_version }}</title>
+    <!-- <title>{% if hostname %}TaBang - {% endif %}TaBangNAS-0.11</title> -->
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <style type="text/css">
     @import "{{ DOJANGO.DOJO_URL }}/resources/dojo.css?cache={{ cache_hash }}";
@@ -59,8 +59,8 @@
         <div data-dojo-type="dijit.layout.ContentPane" id="topLayout" data-dojo-props="region: 'top'">
             <div id="page-header">
                  <div>
-                     <!--<a href="/" title="{{ sw_name }}&reg;"><img src="{{ STATIC_URL }}images/ui/{{ sw_name|lower }}-logo.png?cache={{ cache_hash }}" alt="{{ sw_name }}&reg;" class="left" style="padding-left:10px;"/></a>-->
-                     <a href="/" title="TaBangNAS&reg;"><img src="{{ STATIC_URL }}images/ui/tabangnas-logo.png?cache={{ cache_hash }}" alt="TaBangNAS&reg;" class="left" style="padding-left:10px;"/></a>
+                     <a href="/" title="{{ sw_name }}&reg;"><img src="{{ STATIC_URL }}images/ui/{{ sw_name|lower }}-logo.png?cache={{ cache_hash }}" alt="{{ sw_name }}&reg;" class="left" style="padding-left:10px;"/></a>
+                     <!-- <a href="/" title="TaBangNAS&reg;"><img src="{{ STATIC_URL }}images/ui/tabangnas-logo.png?cache={{ cache_hash }}" alt="TaBangNAS&reg;" class="left" style="padding-left:10px;"/></a> -->
 		     <img src="{{ STATIC_URL }}ix/ix_header_logo.png" border="0" alt="iXsystems, Inc." style="padding-top: 10px; float: right; padding-right:10px;"/>
                  <div id="messages"></div>
 		 <div class="clear"></div>
