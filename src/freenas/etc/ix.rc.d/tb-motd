@@ -5,7 +5,7 @@
 
 # PROVIDE: tb-motd
 # REQUIRE: FILESYSTEMS
-# BEFORE: ix-motd
+# BEFORE: LOGIN
 
 . /etc/rc.subr
 
