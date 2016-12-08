@@ -3,13 +3,13 @@ import datetime
 from south.db import db
 from south.v2 import DataMigration
 from django.db import models
-from freenasUI.common.system import get_sw_name
+from freenasUI.common.system import get_sw_name, SW_NAME_TB
 
 
 class Migration(DataMigration):
 
     def forwards(self, orm):
-        
+
         # Adding model 'Email'
         db.create_table('system_email', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
@@ -24,13 +24,13 @@ class Migration(DataMigration):
         db.send_create_signal('system', ['Email'])
 
         em = orm.Email()
-        em.em_fromemail = 'root@%s.local' % (get_sw_name().lower(), )
+        em.em_fromemail = 'root@%s.local' % (SW_NAME_TB.lower(), )
         em.em_port = 25
         em.em_smtp = False
         em.save()
 
     def backwards(self, orm):
-        
+
         # Deleting model 'Email'
         db.delete_table('system_email')
 

@@ -4692,7 +4692,7 @@ msgstr "Indirizzo email d'origine"
 #: system/models.py:210
 msgid ""
 "An email address that the system will use for the sending address for mail "
-"it sends, eg: freenas@example.com"
+"it sends, eg: tabangnas@example.com"
 msgstr ""
 "Un indirizzo email che il sistema utilizzerà come indirizzo mittente dei "
 "messaggi inviati, ad esempio: freenas@esempio.com"

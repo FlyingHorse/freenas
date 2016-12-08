@@ -362,7 +362,7 @@ class Email(Model):
         verbose_name=_("From email"),
         help_text=_(
             "An email address that the system will use for the "
-            "sending address for mail it sends, eg: freenas@example.com"
+            "sending address for mail it sends, eg: tabangnas@example.com"
         ),
         default='',
     )

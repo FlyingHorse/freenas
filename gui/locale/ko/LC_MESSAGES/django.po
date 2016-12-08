@@ -4485,8 +4485,8 @@ msgstr ""
 #: system/models.py:210
 msgid ""
 "An email address that the system will use for the sending address for mail "
-"it sends, eg: freenas@example.com"
-msgstr "시스템이 이메일을 보내기 위해 사용할 보내기 이메일 주소, eg: freenas@example.com"
+"it sends, eg: tabangnas@example.com"
+msgstr "시스템이 이메일을 보내기 위해 사용할 보내기 이메일 주소, eg: tabangnas@example.com"
 
 #: system/models.py:216
 msgid "Outgoing mail server"

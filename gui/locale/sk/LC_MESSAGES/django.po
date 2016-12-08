@@ -4702,7 +4702,7 @@ msgstr "Email odosielateľa"
 #, fuzzy
 msgid ""
 "An email address that the system will use for the sending address for mail "
-"it sends, eg: freenas@example.com"
+"it sends, eg: tabangnas@example.com"
 msgstr ""
 "Emailová adresa, ktorú bude systém používať ako adresu odosielateľa pre "
 "posielané maily, napr: freenas@mojadomena.sk"

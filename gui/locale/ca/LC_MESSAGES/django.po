@@ -4699,7 +4699,7 @@ msgstr "Del correu electrònic"
 #, fuzzy
 msgid ""
 "An email address that the system will use for the sending address for mail "
-"it sends, eg: freenas@example.com"
+"it sends, eg: tabangnas@example.com"
 msgstr ""
 "Direcció de correu que el sistema utilitzarà com a direcció d'enviament pels "
 "correus enviats, ex. freenas@elmeudomini.com"

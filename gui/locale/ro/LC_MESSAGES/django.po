@@ -4626,7 +4626,7 @@ msgstr "De la adresa"
 #: system/models.py:210
 msgid ""
 "An email address that the system will use for the sending address for mail "
-"it sends, eg: freenas@example.com"
+"it sends, eg: tabangnas@example.com"
 msgstr ""
 "O adresă de email folosită de sistem pentru trimiterea de mesaje, ex. "
 "freenas@exemplu.com"

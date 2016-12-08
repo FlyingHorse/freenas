@@ -4623,7 +4623,7 @@ msgstr "מאימייל"
 #, fuzzy
 msgid ""
 "An email address that the system will use for the sending address for mail "
-"it sends, eg: freenas@example.com"
+"it sends, eg: tabangnas@example.com"
 msgstr ""
 "כתובת אימייל שמערכת תשתמש לצורך שליחת אימיילים, דוג' freenas@mydomain.com"
 

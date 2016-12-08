@@ -4672,10 +4672,10 @@ msgstr "E-mail d'origine"
 #: system/models.py:210
 msgid ""
 "An email address that the system will use for the sending address for mail "
-"it sends, eg: freenas@example.com"
+"it sends, eg: tabangnas@example.com"
 msgstr ""
 "Une adresse e-mail que le système utilisera en tant qu'adresse de "
-"l'expéditeur des messages qu'il envoi, e.g. : freenas@example.com"
+"l'expéditeur des messages qu'il envoi, e.g. : tabangnas@example.com"
 
 #: system/models.py:216
 msgid "Outgoing mail server"

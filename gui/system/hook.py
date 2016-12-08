@@ -47,7 +47,7 @@ class SystemHook(AppHook):
         tabmodels = [
             models.Settings,
             models.Advanced,
-            #models.Email,
+            models.Email,
             models.SystemDataset,
             models.Tunable,
             models.CertificateAuthority,
