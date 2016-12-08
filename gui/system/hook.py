@@ -47,7 +47,7 @@ class SystemHook(AppHook):
         tabmodels = [
             models.Settings,
             models.Advanced,
-            models.Email,
+            #models.Email,
             models.SystemDataset,
             models.Tunable,
             models.CertificateAuthority,
@@ -107,6 +107,7 @@ class SystemHook(AppHook):
             'url': reverse('system_bootenv_datagrid'),
         })
 
+        '''
         tabs.insert(7, {
             'name': 'Update',
             'focus': 'system.Update',
@@ -120,5 +121,6 @@ class SystemHook(AppHook):
             'verbose_name': _('Support'),
             'url': reverse('support_home'),
         })
+        '''
 
         return tabs
