@@ -773,6 +773,7 @@ class notifier:
     def _start_motd(self):
         self._system("/usr/sbin/service ix-motd quietstart")
         self._system("/usr/sbin/service motd quietstart")
+        self._system("/usr/sbin/service tb-motd quietstart")
 
     def _start_ttys(self):
         self._system("/usr/sbin/service ix-ttys quietstart")
