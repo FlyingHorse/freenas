@@ -92,14 +92,14 @@ class TunableView(TreeNode):
     type = 'opensystem'
     append_to = 'system.Tunable'
 
-
+'''
 class Update(TreeNode):
 
     gname = 'Update'
     name = _('Update')
     type = 'opensystem'
     icon = 'UpdateIcon'
-
+'''
 
 class CertificateAuthorityView(BackupMixin, TreeNode):
 
@@ -118,7 +118,7 @@ class CertificateView(BackupMixin, TreeNode):
     icon = u'CertificateIcon'
     order = 15
 
-
+'''
 class Support(TreeNode):
 
     gname = 'Support'
@@ -126,3 +126,4 @@ class Support(TreeNode):
     icon = u"SupportIcon"
     type = 'opensystem'
     order = 20
+'''
