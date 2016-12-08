@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# $FreeBSD$
+#
+
+# PROVIDE: tb-motd
+# REQUIRE: FILESYSTEMS
+# BEFORE: ix-motd
+
+. /etc/rc.subr
+
+modify_motd()
+{
+	sed '1s/.*/TaBangNAS, ZFS \& FreeBSD based storage system for data share over network./' /etc/motd > /etc/motd_tb
+	mv /etc/motd_tb /etc/motd
+}
+
+name="tb-motd"
+start_cmd='modify_motd'
+stop_cmd=':'
+
+load_rc_config $name
+run_rc_command "$1"
