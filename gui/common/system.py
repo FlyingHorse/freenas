@@ -53,6 +53,7 @@ log = logging.getLogger("common.system")
 SW_VERSION_TB = 'TaBangNAS-0.11'
 HOST_NAME_TB = 'TaBangNAS.local'
 SW_NAME_TB = 'TaBangNAS'
+SW_LOGIN_VERSION_TB = '0.11'
 
 
 def get_sw_version(strip_build_num=False):

@@ -53,7 +53,7 @@ from freenasUI.common.freenasnis import (
 )
 from freenasUI.common.freenasusers import FreeNAS_Users, FreeNAS_Groups
 from freenasUI.common.system import get_sw_login_version, get_sw_name
-from freenasUI.common.system import SW_VERSION_TB, SW_NAME_TB, HOST_NAME_TB
+from freenasUI.common.system import SW_LOGIN_VERSION_TB, SW_NAME_TB, HOST_NAME_TB
 from freenasUI.freeadmin.apppool import appPool
 from freenasUI.freeadmin.views import JsonResp
 
@@ -311,7 +311,7 @@ def login_wrapper(
     if extra_context is None:
         extra_context = {}
     extra_context.update({
-        'sw_login_version': get_sw_login_version(),
+        'sw_login_version': SW_LOGIN_VERSION_TB,
         #'sw_name': get_sw_name(),
         'sw_name': SW_NAME_TB,
     })
