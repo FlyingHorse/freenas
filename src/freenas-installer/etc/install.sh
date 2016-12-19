@@ -53,7 +53,7 @@ pre_install_check()
     local memsize=$(sysctl -n hw.physmem)
 
     if [ ${memsize} -lt ${minmem} ]; then
-	dialog --clear --title "${AVATAR_PROJECT}" --yesno "You have less than the recommended amount of RAM (4GBytes), do you wish to continue even though performance may be horribly slow?" 7 74 || return 1
+	dialog --clear --title "TaBangNAS" --yesno "You have less than the recommended amount of RAM (4GBytes), do you wish to continue even though performance may be horribly slow?" 7 74 || return 1
     fi
     return 0
 }
@@ -470,7 +470,7 @@ partition_disk() {
 	_minsize=$(get_minimum_size ${_disks})
 
 	if [ "${_minsize}" = "0k" ]; then
-	    echo "Disk is too small to install ${AVATAR_PROJECT}" 1>&2
+	    echo "Disk is too small to install TaBangNAS" 1>&2
 	    return 1
 	fi
 
@@ -857,7 +857,7 @@ menu_install()
 	    fi
 
 	    eval "dialog --title 'Choose destination media' \
-	      --checklist 'Select one or more drives where $AVATAR_PROJECT should be installed (use arrow keys to navigate to the drive(s) for installation; select a drive with the spacebar).' \
+	      --checklist 'Select one or more drives where TaBangNAS should be installed (use arrow keys to navigate to the drive(s) for installation; select a drive with the spacebar).' \
 	      ${_menuheight} 60 ${_items} ${_list}" 2>${_tmpfile}
 	    [ $? -eq 0 ] || exit 1
 	fi
@@ -961,10 +961,10 @@ menu_install()
     fi
     # Start critical section.
     if ${INTERACTIVE}; then
-	trap "set +x; read -p \"The $AVATAR_PROJECT $_action on ${_realdisks} has failed. Press enter to continue.. \" junk" EXIT
+	trap "set +x; read -p \"The TaBangNAS $_action on ${_realdisks} has failed. Press enter to continue.. \" junk" EXIT
     else
 #	trap "echo \"The ${AVATAR_PROJECT} ${_action} on ${_realdisks} has failed.\" ; sleep 15" EXIT
-	trap "set +x; read -p \"The $AVATAR_PROJECT $_action on ${_realdisks} has failed. Press enter to continue.. \" junk" EXIT
+	trap "set +x; read -p \"The TaBangNAS $_action on ${_realdisks} has failed. Press enter to continue.. \" junk" EXIT
     fi
     set -e
 #    set -x
