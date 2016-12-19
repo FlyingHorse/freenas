@@ -260,7 +260,7 @@ Proceed with the ${_type}?
 EOD
     _msg=`cat "${_tmpfile}"`
     rm -f "${_tmpfile}"
-    dialog --clear --title "$AVATAR_PROJECT ${_type}" --yesno "${_msg}" 13 74
+    dialog --clear --title "TaBangNAS ${_type}" --yesno "${_msg}" 13 74
     [ $? -eq 0 ] || exit 1
 }
 
@@ -275,7 +275,7 @@ Do you wish to perform an upgrade or a fresh installation on ${_disk}?
 EOD
     _msg=`cat "${_tmpfile}"`
     rm -f "${_tmpfile}"
-    dialog --title "Upgrade this $AVATAR_PROJECT installation" --no-label "Fresh Install" --yes-label "Upgrade Install" --yesno "${_msg}" 8 74
+    dialog --title "Upgrade this TaBangNAS installation" --no-label "Fresh Install" --yes-label "Upgrade Install" --yesno "${_msg}" 8 74
     return $?
 }
 
@@ -308,14 +308,14 @@ ask_boot_method()
 
     local _tmpfile="/tmp/msg"
     cat << EOD > "${_tmpfile}"
-$AVATAR_PROJECT can be booted in either BIOS or UEFI mode.
+TaBangNAS can be booted in either BIOS or UEFI mode.
 
 BIOS mode is recommended for legacy and enterprise hardware,
 whereas UEFI may be required for newer consumer motherboards.
 EOD
     _msg=`cat "${_tmpfile}"`
     rm -f "${_tmpfile}"
-    dialog ${dlgflags} --title "$AVATAR_PROJECT Boot Mode" --no-label "Boot via BIOS" --yes-label "Boot via UEFI" --yesno "${_msg}" 8 74
+    dialog ${dlgflags} --title "TaBangNAS Boot Mode" --no-label "Boot via BIOS" --yes-label "Boot via UEFI" --yesno "${_msg}" 8 74
     return $?
 }
 
