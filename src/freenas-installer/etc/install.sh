@@ -381,11 +381,11 @@ mount_disk() {
 	mkdir -p ${_mnt}/data
 	return 0
 }
-	
+
 create_partitions() {
     local _disk="$1"
     local _size=""
-    
+
     if [ $# -eq 2 ]; then
 	_size="-s $2"
     fi
@@ -457,7 +457,7 @@ partition_disk() {
 	local _disks _disksparts
 	local _mirror
 	local _minsize
-	
+
 	_disks=$*
 
 	# Erase both typical metadata area.
@@ -468,12 +468,12 @@ partition_disk() {
 	done
 
 	_minsize=$(get_minimum_size ${_disks})
-	
+
 	if [ "${_minsize}" = "0k" ]; then
 	    echo "Disk is too small to install ${AVATAR_PROJECT}" 1>&2
 	    return 1
 	fi
-	
+
 	_disksparts=$(for _disk in ${_disks}; do
 	    create_partitions ${_disk} ${_minsize} >&2
 	    if [ "$BOOTMODE" != "efi" ] ; then
@@ -782,7 +782,7 @@ menu_install()
     local data_part
     local upgrade_style="new"
     local whendone=""
-    
+
     local readonly CD_UPGRADE_SENTINEL="/data/cd-upgrade"
     local readonly NEED_UPDATE_SENTINEL="/data/need-update"
     # create a sentinel file for post-fresh-install boots
@@ -811,7 +811,7 @@ menu_install()
 	esac
     done
     shift $((OPTIND-1))
-    
+
     if [ $# -gt 0 ]
     then
 	_disks="$@"
@@ -823,7 +823,7 @@ menu_install()
     if ${INTERACTIVE}; then
 	pre_install_check || return 0
     fi
-    
+
     if do_sata_dom
     then
 	_satadom="YES"
@@ -841,7 +841,7 @@ menu_install()
 		_list="${_list} ${_disk} '${_desc}' off"
 		_items=$((${_items} + 1))
 	    done
-	    
+
 	    _tmpfile="/tmp/answer"
 	    if [ ${_items} -ge 10 ]; then
 		_items=10
@@ -980,7 +980,7 @@ menu_install()
 	if [ "${upgrade_style}" = "old" ]; then
 	    # For old style, we have two potential
 	    # partitions to look at:  s1a and s2a.
-	    # 
+	    #
 	    slice=$(gpart show ${_disk} | grep -F '[active]' | awk ' { print $3;}')
 	    if [ -z "${slice}" ]; then
 		# We don't have an active slice, so something is wrong.
@@ -1057,7 +1057,7 @@ menu_install()
       partition_disk ${_realdisks}
       mount_disk /tmp/data
     fi
-    
+
     if [ -d /tmp/data_preserved ]; then
 	cp -pR /tmp/data_preserved/. /tmp/data/data
 	# we still need the newer version we are upgrading to's
@@ -1077,7 +1077,7 @@ menu_install()
 
     # Tell it to look in /.mount for the packages.
     /usr/local/bin/freenas-install -P /.mount/${OS}/Packages -M /.mount/${OS}-MANIFEST /tmp/data
-    
+
     rm -f /tmp/data/conf/default/etc/fstab /tmp/data/conf/base/etc/fstab
     echo "freenas-boot/grub	/boot/grub	zfs	rw,noatime	1	0" > /tmp/data/etc/fstab
     if is_truenas; then
@@ -1091,7 +1091,7 @@ menu_install()
 	if [ -d /tmp/.ssh ]; then
             cp -pR /tmp/.ssh /tmp/data/root/
 	fi
-	
+
 	# TODO: this needs to be revisited.
 	if [ -d /tmp/modules ]; then
             for i in `ls /tmp/modules`
@@ -1113,7 +1113,7 @@ menu_install()
 		-e '/^kernel=.*/d' /tmp/data/boot/loader.conf /tmp/data/boot/loader.conf.local
 	fi
     fi
-    
+
     # To support Xen, we need to disable HPET.
     if [ "$(/tmp/data/usr/local/sbin/dmidecode -s system-product-name)" = "HVM domU" ]; then
 	if ! grep -q 'hint.hpet.0.clock' /tmp/data/boot/loader.conf.local 2>/dev/null ; then
@@ -1122,10 +1122,10 @@ menu_install()
     fi
     # Debugging pause.
     # read foo
-    
+
     # XXX: Fixup
     # tar cf - -C /tmp/data/conf/base etc | tar xf - -C /tmp/data/
-    
+
     # grub and beadm will need a devfs
     mount -t devfs devfs /tmp/data/dev
     # Create a temporary /var
@@ -1134,7 +1134,7 @@ menu_install()
     # Set default boot filesystem
     zpool set bootfs=freenas-boot/ROOT/${BENAME} freenas-boot
     install_grub /tmp/data ${_realdisks}
-    
+
 #    set +x
     if [ -d /tmp/data_preserved ]; then
 	# Instead of sentinel files, let's just migrate!
@@ -1186,7 +1186,7 @@ menu_install()
 
     trap - EXIT
 
-    _msg="The $AVATAR_PROJECT $_action on ${_realdisks} succeeded!\n"
+    _msg="The TaBangNAS $_action on ${_realdisks} succeeded!\n"
     _dlv=`/sbin/sysctl -n vfs.nfs.diskless_valid 2> /dev/null`
     if [ ${_dlv:=0} -ne 0 ]; then
         _msg="${_msg}Please reboot, and change BIOS boot order to *not* boot over network."
@@ -1232,7 +1232,7 @@ menu_shutdown()
 #                    relative to the NFS mount directory.
 #  test.run_tests_on_boot - If set to 'yes', then run the
 #                           tests on bootup, before displaying
-#                           the install menu. 
+#                           the install menu.
 #
 #  For example, if the following variables are defined:
 #
@@ -1252,11 +1252,11 @@ menu_test()
     if [ -z "$_script" -o -z "$_nfs_mount"  ]; then
         return
     fi
-  
+
     if [ -e /tmp/tests ]; then
         umount /tmp/tests 2> /dev/null
         rm -fr /tmp/tests
-    fi 
+    fi
     mkdir -p /tmp/tests
     if [ ! -d /tmp/tests ]; then
         echo "No test directory"
@@ -1297,7 +1297,7 @@ main()
 
     while :; do
 
-        dialog --clear --title "$AVATAR_PROJECT $AVATAR_VERSION Console Setup" --menu "" 12 73 6 \
+        dialog --clear --title "TaBangNAS $AVATAR_VERSION Console Setup" --menu "" 12 73 6 \
             "1" "Install/Upgrade" \
             "2" "Shell" \
             "3" "Reboot System" \
@@ -1358,7 +1358,7 @@ getsize() {
     esac
     return 0
 }
-	
+
 parse_config() {
     local _conf="/etc/install.conf"
     local _diskList=""
@@ -1377,7 +1377,7 @@ parse_config() {
     local _diskCount=0
     local password=""
     local whenDone=""
-    
+
     while read line
     do
 	if expr "${line}" : "^#" > /dev/null

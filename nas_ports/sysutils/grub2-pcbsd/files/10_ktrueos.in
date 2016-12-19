@@ -55,7 +55,7 @@ display_loaderopts()
   if [ -n "$1" ] ; then
      fMnt="/mnt.$$"
      mkdir $fMnt
-     mount -t zfs  ${1} $fMnt >/dev/null 
+     mount -t zfs  ${1} $fMnt >/dev/null
      if [ $? -ne 0 ] ; then
         echo "Failed to mount ${1}" >&2
         return
@@ -63,7 +63,7 @@ display_loaderopts()
   else
      fMnt=""
   fi
-  
+
   # Create our placeholder to save _load entries to parse
   touch /tmp/.lRObjs.$$
   touch /tmp/.lSysCtls.$$
@@ -226,7 +226,7 @@ detect_beadm()
 
    # Get list of beadm datasets
    for b in $BE_LIST
-   do 
+   do
       # Got a beadm snapshot, lets get the complete dataset name
       beLine=`${BEADM} list -a | grep "/$BEDS/${b}[[:space:]]"`
       cdataset=`echo $beLine | awk '{print $1}'`
@@ -251,7 +251,7 @@ EOF
     kfreebsd_module ${shortdataset}/@/boot/zfs/rpool.cache type=/boot/zfs/zpool.cache
     set kFreeBSD.vfs.root.mountfrom=zfs:$cdataset
 EOF
-      
+
       # Now lets look for options in loader.conf to load
       loadPrefix="${shortdataset}"
       # If this dataset is currently mounted, we can skip mounting it
@@ -265,15 +265,15 @@ EOF
       # Let's see if this is the default BE
       bootfs=$(zpool list -Ho bootfs ${cdataset%%/*})
       if [ "${bootfs}" = "${cdataset}" ]; then
-        DEFAULT_BE="${NICK} (${beNickName}) - ${cdatadate} ${cdatatime}"
+        DEFAULT_BE="TaBangNAS (${beNickName}) - ${cdatadate} ${cdatatime}"
       fi
 
       # Lets start a submenu for each BE
 cat << EOF
 
-submenu "${NICK} (${beNickName}) - ${cdatadate} ${cdatatime}" {
+submenu "TaBangNAS (${beNickName}) - ${cdatadate} ${cdatatime}" {
 EOF
-  
+
   # Lets do the default entry first
   #################################
   cat << EOF
@@ -393,4 +393,3 @@ EOF
 
 # Detect our types of disk layouts
 detect_beadm
-
